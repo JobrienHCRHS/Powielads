@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>The Powhatan</Name>
+    <Guid>ad2598a0-401d-4133-ace0-c6086b7d7972</Guid>
+    <ProjectGuid>a123634e-8eca-4cb8-8e7b-ee5b386c8555</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Adds the Powhatan to the game under Wahunsenacawh.</Teaser>
+    <Description>Adds the Powhatan to the game under Wahunsenacawh.</Description>
+    <Authors>SeelingCat, EnigmaConundrum, and Relic</Authors>
+    <SpecialThanks>ChimpanG</SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>The Powhatan under Wahunsenacawh</AssemblyName>
+    <RootNamespace>The Powhatan under Wahunsenacawh</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Mod.Art.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Database\Powhatan_GameText.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Database\Powhatan_Config.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Database\Powhatan_GameDefines.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Database\Powhatan_IconDefinitions.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Database\Powhatan_ModSupport.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core" />
+    <Folder Include="Core\Database" />
+    <Folder Include="Core\lua" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
